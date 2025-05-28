@@ -40,6 +40,7 @@ export const useSettings = () => {
   const query = useQuery({
     queryKey: ["settings"],
     queryFn: getSettingsQueryFn,
+    refetchOnWindowFocus: false,
     // Only retry if the error is not a 404 because we
     // would want to show the modal immediately if the
     // settings are not found
